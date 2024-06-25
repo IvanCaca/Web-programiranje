@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Color Choice</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Choose your color theme</h2>
+        <div class="color-choice">
+            <button id="baby-pink" onclick="setColor('baby-pink')">Baby Pink</button>
+            <button id="baby-blue" onclick="setColor('baby-blue')">Baby Blue</button>
+        </div>
+    </div>
+
+    <script>
+        function setColor(color) {
+            if (color === 'baby-pink') {
+                document.body.style.backgroundColor = '#ffcccb';
+                document.querySelectorAll('.container').forEach(container => {
+                    container.style.backgroundColor = '#ffb6c1';
+                });
+                document.querySelectorAll('button').forEach(button => {
+                    button.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                });
+            } else if (color === 'baby-blue') {
+                document.body.style.backgroundColor = '#add8e6';
+                document.querySelectorAll('.container').forEach(container => {
+                    container.style.backgroundColor = '#87ceeb';
+                });
+                document.querySelectorAll('button').forEach(button => {
+                    button.style.backgroundColor = 'rgba(0, 0, 0, 0.6)';
+                });
+            }
+        }
+    </script>
+</body>
+</html>
